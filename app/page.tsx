@@ -1,5 +1,12 @@
 import Image from "next/image";
 
+import { Metadata } from 'next';
+
+export const metadata: Metadata = {
+  title: 'Deer Robot, Inc.',
+};
+
+
 const features = [
   {
     title: "Gentle, quality-first picking",
@@ -43,8 +50,16 @@ export default function Home() {
       <header className="sticky top-0 z-50 border-b border-zinc-200 bg-white/80 backdrop-blur">
         <div className="mx-auto flex max-w-6xl items-center justify-between px-4 py-3">
           <div className="flex items-center gap-2">
-            <div className="h-8 w-8 rounded-xl border border-zinc-200 bg-zinc-50" />
-            <span className="font-semibold tracking-tight">DeerRobot</span>
+            {/*<div className="h-8 w-8 rounded-xl border border-zinc-200 bg-zinc-50" />
+            <span className="font-semibold tracking-tight">Deer Robot</span>*/}
+            <Image
+              src="/logo.png"
+              alt="Deer Robot Logo"
+              width={256}
+              height={256}
+              className="h-33 w-33 rounded-xl object-contain"
+            />
+            <span className="font-semibold tracking-tight">Deer Robot</span>
           </div>
           <nav className="hidden items-center gap-6 text-sm text-zinc-700 md:flex">
             <a className="hover:text-zinc-900" href="#product">Product</a>
@@ -65,10 +80,10 @@ export default function Home() {
       <section className="relative">
         <div className="mx-auto grid max-w-6xl gap-10 px-4 py-16 md:grid-cols-2 md:py-20">
           <div>
-            <div className="inline-flex items-center gap-2 rounded-full border border-zinc-200 bg-zinc-50 px-3 py-1 text-xs text-zinc-700">
-              <span className="h-2 w-2 rounded-full bg-red-500" />
-              Strawberry harvesting robots
-            </div>
+            {/*<div className="inline-flex items-center gap-2 rounded-full border border-zinc-200 bg-zinc-50 px-3 py-1 text-xs text-zinc-700">*/}
+              {/*<span className="h-2 w-2 rounded-full bg-red-500" />*/}
+              {/*Strawberry harvesting robots*/}
+            {/*</div>*/}
 
             <h1 className="mt-5 text-4xl font-semibold tracking-tight md:text-5xl">
               Autonomous strawberry harvesting,
@@ -102,7 +117,7 @@ export default function Home() {
             </div>
 
             <p className="mt-3 text-xs text-zinc-500">
-              Replace these with real metrics once you have pilot data.
+              {/*Replace these with real metrics once you have pilot data.*/}
             </p>
           </div>
 
@@ -110,12 +125,22 @@ export default function Home() {
           <div className="relative overflow-hidden rounded-3xl border border-zinc-200 bg-gradient-to-b from-zinc-50 to-white">
             <div className="absolute inset-0 opacity-[0.08]" />
             <div className="p-6">
-              <div className="rounded-2xl border border-zinc-200 bg-white p-4">
-                <div className="text-sm font-medium">Placeholder hero visual</div>
+              {/*<div className="rounded-2xl border border-zinc-200 bg-white p-4">*/}
+                {/*<div className="text-sm font-medium">Placeholder hero visual</div>
                 <div className="mt-1 text-sm text-zinc-600">
                   Swap this for a photo/video of the robot in strawberry rows.
-                </div>
-              </div>
+                </div>*/}
+              {/*</div>*/}
+
+               {/*Optional: add a real image later*/}
+              <Image
+                src="/Robot_hero.png"
+                alt="DeerRobot harvesting in strawberry rows"
+                width={1200}
+                height={900}
+                className="mt-6 rounded-2xl"
+                priority
+              />
 
               <div className="mt-6 grid gap-4 sm:grid-cols-2">
                 <InfoCard title="Ripe detection" desc="Vision-guided selection in dense foliage." />
@@ -123,17 +148,7 @@ export default function Home() {
                 <InfoCard title="Operator workflow" desc="Simple controls + clear status." />
                 <InfoCard title="Field-ready" desc="Built for outdoor variability." />
               </div>
-
-              {/* Optional: add a real image later
-              <Image
-                src="/hero.jpg"
-                alt="DeerRobot harvesting in strawberry rows"
-                width={1200}
-                height={900}
-                className="mt-6 rounded-2xl"
-                priority
-              />
-              */}
+              
             </div>
           </div>
         </div>
@@ -241,8 +256,8 @@ export default function Home() {
                 </p>
 
                 <div className="mt-6 space-y-2 text-sm text-zinc-700">
-                  <div><span className="font-medium text-zinc-900">Email:</span> hello@deerrobot.ai</div>
-                  <div><span className="font-medium text-zinc-900">Location:</span> (add city)</div>
+                  <div><span className="font-medium text-zinc-900">Email:</span> saurabhsharma@ucsb.edu</div>
+                  <div><span className="font-medium text-zinc-900">Location:</span> Santa Barbara</div>
                 </div>
               </div>
 
@@ -258,7 +273,7 @@ export default function Home() {
                   Send
                 </button>
                 <p className="text-xs text-zinc-500">
-                  (Hook this up to a form endpoint later—Vercel, Formspree, Resend, etc.)
+                  {/*(Hook this up to a form endpoint later—Vercel, Formspree, Resend, etc.)*/}
                 </p>
               </form>
             </div>
