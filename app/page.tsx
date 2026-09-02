@@ -59,7 +59,6 @@ export default function Home() {
               height={256}
               className="h-33 w-33 rounded-xl object-contain"
             />
-            <span className="font-semibold tracking-tight">Deer Robot</span>
           </div>
           <nav className="hidden items-center gap-6 text-sm text-zinc-700 md:flex">
             <a className="hover:text-zinc-900" href="#product">Product</a>
